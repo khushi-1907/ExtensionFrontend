@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    font-family: "Noto Sans", sans-serif;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body.dark {
+    background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+body button:focus {
+    outline: 2px solid hsl(3, 71%, 56%);
+    outline-offset: 2px;
+    transition: outline 0.1s ease-in-out, outline-offset 0.1s;
+}
+
+.header {
+    background-color: hsl(200, 60%, 99%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.08);
+    margin: 2em auto;
+    width: 80vw;
+}
+
+.header.dark {
+    background-color: hsl(226, 25%, 17%);
+}
+
+.header.dark .svg [fill="#091540"] {
+    fill: #ffffff !important;
+}
+
+.toggleButton {
+    background-color: hsl(0, 0%, 93%);
+    border: 2px solid hsl(0, 0%, 93%);
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header.dark .toggleButton {
+    background-color: hsl(225, 23%, 24%);
+    border: 2px solid hsl(225, 23%, 24%);
+}
+
+.toggleButton:hover {
+    background-color: hsl(0, 0%, 78%);
+}
+
+.header.dark .toggleButton:hover {
+    background-color: hsl(226, 11%, 37%);
+    border-color: hsl(226, 11%, 37%);
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em auto;
+    width: 82vw;
+}
+
+.bar .text {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.bar.dark .text {
+    color: hsl(200, 60%, 99%);
+}
+
+.bar .barButton {
+    background-color: hsl(200, 60%, 99%);
+    border: 1px solid hsl(0, 0%, 78%);
+    padding: 10px 15px;
+    margin: 0px 4px;
+    
+    border-radius: 20px;
+    font-family: "Noto Sans", sans-serif;
+    cursor: pointer;
+}
+
+.bar.dark .barButton {
+    background-color: hsl(225, 23%, 24%);
+    color: hsl(200, 60%, 99%);
+    border-color: hsl(226, 11%, 37%);
+}
+
+.bar .barButton:hover {
+    background-color: hsla(0, 0%, 100%, 0.742);
+    border-color: hsl(217, 61%, 90%);
+    color: hsl(226, 11%, 37%);
+    border: none;
+}
+
+.bar.dark .barButton:hover {
+    background-color: hsl(226, 11%, 37%);
+    border-color: hsl(226, 11%, 37%);
+    color: white;
+}
+
+.bar .barButton.active {
+    background-color: hsl(3, 77%, 44%);
+    color: white;
+}
+
+.bar.dark .barButton.active {
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+}
+
+.bar .barButton.active:hover {
+    background-color: hsl(3, 71%, 56%);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 83vw;
+}
+
+.extContainer {
+    background-color: hsl(200, 60%, 99%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.08);
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    min-height: 160px;
+}
+
+.extContainerHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.extLogo {
+    width: 50px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.extText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.extText h2 {
+    color: hsl(227, 75%, 14%);
+    margin: 0;
+    font-size: 20px;
+}
+
+.extText p {
+    color: hsl(225, 23%, 24%);
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+.extButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.extButton button:first-child {
+    background-color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid rgba(134, 134, 134, 0.432);
+    font-family: "Noto Sans", sans-serif;
+    margin: 10px 0px;
+}
+
+.extButton button:first-child:hover {
+    background-color: hsl(3, 77%, 44%);
+    color: white;
+}
+
+.extContainer.dark {
+    background-color: hsl(226, 25%, 17%);
+    border: 1px solid hsl(226, 11%, 37%);
+}
+
+.extContainer.dark .extText h2 {
+    color: white;
+}
+
+.extContainer.dark .extText p {
+    color: white;
+    font-weight: 300;
+}
+
+.extContainer.dark .extButton button:first-child {
+    background-color: hsl(226, 25%, 17%);
+    color: white;
+}
+
+.extContainer.dark .extButton button:first-child:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+}
+
+.extButton .togg {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.extContainer.dark .extButton .togg {
+    background-color: hsl(226, 11%, 37%);
+    color: white;
+}
+
+.extContainer.dark .extButton .togg:hover {
+    background-color: hsl(226, 11%, 44%);
+}
+
+.extButton .togg::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.extButton .togg.active::before {
+    transform: translateX(20px);
+}
+
+.extButton .togg:hover {
+    background-color: #b3b3b3;
+}
+
+.extButton .togg.active {
+    background-color: hsl(3, 77%, 44%);
+}
+
+.extContainer.dark .extButton .togg.active {
+    background-color: hsl(3, 86%, 64%);
+}
+
+.extContainer.dark .extButton .togg.active:hover {
+    background-color: hsl(3, 71%, 56%);
+}
+
+.extButton .togg.active:hover {
+    background-color: hsl(3, 71%, 56%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .extButton {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bar .barButton {
+        margin: 20px 5px;
+    }
+}
